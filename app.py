@@ -1,10 +1,13 @@
-from dash import Dash, html
+"""
+# My first app
+Here's our first attempt at using data to create a table:
+"""
 
-app = Dash(__name__)
+import streamlit as st
+import pandas as pd
+df = pd.DataFrame({
+  'first column': [1, 2, 3, 4],
+  'second column': [10, 20, 30, 40]
+})
 
-app.layout = html.Div([
-    html.Div(children='Hello World')
-])
-
-if __name__ == '__main__':
-    app.run(debug=True)
+df
